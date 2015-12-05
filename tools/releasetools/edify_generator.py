@@ -165,10 +165,16 @@ class EdifyGenerator(object):
   def RunBackup(self, command):
     self.script.append(('run_program("/tmp/install/bin/backuptool.sh", "%s");' % command))
 
+  def FlashV4A(self):
+    self.script.append('package_extract_dir("v4a", "/tmp/v4a");')
+    self.script.append('run_program("/sbin/busybox", "unzip", "/tmp/v4a/v4a.zip", "META-INF/com/google/android/*", "-d", "/tmp/v4a");')
+    self.script.append('run_program("/sbin/busybox", "sh", "/tmp/v4a/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/v4a/v4a.zip");')
+
   def ValidateSignatures(self, command):
     self.script.append('package_extract_file("META-INF/org/candyroms/releasekey", "/tmp/releasekey");')
     # Exit code 124 == abort. run_program returns raw, so left-shift 8bit
     self.script.append('run_program("/tmp/install/bin/otasigcheck.sh") != "31744" || abort("Can\'t install this package on top of incompatible data. Please try another package or run a factory reset");')
+
 
   def ShowProgress(self, frac, dur):
     """Update the progress bar, advancing it over 'frac' over the next
