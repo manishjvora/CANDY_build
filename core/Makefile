@@ -2240,18 +2240,18 @@ otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 bacon: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CANDY_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(CANDY_TARGET_PACKAGE) > $(CANDY_TARGET_PACKAGE).md5sum
-	@echo -e ${CL_YLW}"══════════════════════════════════════════════════════════════════════════════════"${CL_RST}
-	@echo -e ${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7"${CL_YLW}"*"${CL_BLU}
-	@echo -e ${CL_YLW}"══════════════════════════════════════════════════════════════════════════════════"${CL_RST}
-	@echo -e ${CL_BLU}"                     ██████╗"${CL_RED}" █████╗ "${CL_YLW}"███╗   ██╗"${CL_GRN}"██████╗ "${CL_BLU}"██╗   ██╗                   "${CL_RST}
-	@echo -e ${CL_BLU}"                    ██╔════╝"${CL_RED}"██╔══██╗"${CL_YLW}"████╗  ██║"${CL_GRN}"██╔══██╗"${CL_BLU}"╚██╗ ██╔╝                   "${CL_RST}
-	@echo -e ${CL_BLU}"                    ██║     "${CL_RED}"███████║"${CL_YLW}"██╔██╗ ██║"${CL_GRN}"██║  ██║"${CL_BLU}" ╚═██╔═╝                    "${CL_RST}
-	@echo -e ${CL_BLU}"                    ██║     "${CL_RED}"██╔══██║"${CL_YLW}"██║╚██╗██║"${CL_GRN}"██║  ██║"${CL_BLU}"   ██║                      "${CL_RST}
-	@echo -e ${CL_BLU}"                    ╚██████╗"${CL_RED}"██║  ██║"${CL_YLW}"██║ ╚████║"${CL_GRN}"██████╔╝"${CL_BLU}"   ██║                      "${CL_RST}
-	@echo -e ${CL_BLU}"                     ╚═════╝"${CL_RED}"╚═╝  ╚═╝"${CL_YLW}"╚═╝  ╚═══╝"${CL_GRN}" ╚════╝ "${CL_BLU}"   ╚═╝                      "${CL_RST}
-	@echo -e ${CL_YLW}"══════════════════════════════════════════════════════════════════════════════════"${CL_RST}
+	@echo -e ${CL_YLW}"═══════════════════════════════════════════════════════════════════════════════════"${CL_RST}
+	@echo -e ${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7.1"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7.1"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7.1"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7.1"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7.1"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7.1"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7.1"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7.1"${CL_YLW}"*"${CL_BLU}"C"${CL_RED}"a"${CL_YLW}"n"${CL_GRN}"d"${CL_BLU}"y"${CL_RED}"7.1"${CL_YLW}"*"${CL_RST}
+	@echo -e ${CL_YLW}"═══════════════════════════════════════════════════════════════════════════════════"${CL_RST}
+	@echo -e ${CL_BLU}"                     ██████╗"${CL_RED}" █████╗ "${CL_YLW}"███╗   ██╗"${CL_GRN}"██████╗ "${CL_BLU}"██╗   ██╗"${CL_RST}
+	@echo -e ${CL_BLU}"                    ██╔════╝"${CL_RED}"██╔══██╗"${CL_YLW}"████╗  ██║"${CL_GRN}"██╔══██╗"${CL_BLU}"╚██╗ ██╔╝"${CL_RST}
+	@echo -e ${CL_BLU}"                    ██║     "${CL_RED}"███████║"${CL_YLW}"██╔██╗ ██║"${CL_GRN}"██║  ██║"${CL_BLU}" ╚═██╔═╝ "${CL_RST}
+	@echo -e ${CL_BLU}"                    ██║     "${CL_RED}"██╔══██║"${CL_YLW}"██║╚██╗██║"${CL_GRN}"██║  ██║"${CL_BLU}"   ██║   "${CL_RST}
+	@echo -e ${CL_BLU}"                    ╚██████╗"${CL_RED}"██║  ██║"${CL_YLW}"██║ ╚████║"${CL_GRN}"██████╔╝"${CL_BLU}"   ██║   "${CL_RST}
+	@echo -e ${CL_BLU}"                     ╚═════╝"${CL_RED}"╚═╝  ╚═╝"${CL_YLW}"╚═╝  ╚═══╝"${CL_GRN}" ╚════╝ "${CL_BLU}"   ╚═╝   "${CL_RST}
+	@echo -e ${CL_YLW}"═══════════════════════════════════════════════════════════════════════════════════"${CL_RST}
 	@echo -e ${CL_CYN}"$(CANDY_TARGET_PACKAGE)"${CL_RST}
-	@echo -e ${CL_YLW}"══════════════════════════════════════════════════════════════════════════════════"${CL_RST}
+	@echo -e ${CL_YLW}"═══════════════════════════════════════════════════════════════════════════════════"${CL_RST}
 
 
 endif    # build_ota_package
