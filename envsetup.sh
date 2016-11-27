@@ -619,17 +619,18 @@ function lunch()
     fi
 
     local product=$(echo -n $selection | sed -e "s/-.*$//")
+    local device=$(echo -n $product | sed -e "s/.*candy_//")
     check_product $product
     if [ $? -ne 0 ]
     then
         # if we can't find a product, try to grab it off the CANDY github
         T=$(gettop)
         pushd $T > /dev/null
-        vendor/candy/build/tools/roomservice.py $product
+        vendor/candy/build/tools/roomservice.py $device
         popd > /dev/null
         check_product $product
     else
-        vendor/candy/build/tools/roomservice.py $product true
+        vendor/candy/build/tools/roomservice.py -d $device
     fi
     TARGET_PRODUCT=$product \
     TARGET_BUILD_VARIANT=$variant \
