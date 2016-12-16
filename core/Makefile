@@ -308,7 +308,7 @@ INSTALLED_RECOVERYIMAGE_TARGET :=
 endif
 
 $(INSTALLED_BUILD_PROP_TARGET): $(intermediate_system_build_prop) $(INSTALLED_RECOVERYIMAGE_TARGET)
-	@echo "Target build info: $@"
+	@echo -e ${CL_CYN}"Target build info:"${CL_RST}" $@"
 	$(hide) cat $(intermediate_system_build_prop) > $@
 ifdef INSTALLED_RECOVERYIMAGE_TARGET
 	$(hide) echo ro.expect.recovery_id=`cat $(RECOVERYIMAGE_ID_FILE)` >> $@
@@ -1341,7 +1341,7 @@ INSTALLED_SYSTEMIMAGE := $(PRODUCT_OUT)/system.img
 SYSTEMIMAGE_SOURCE_DIR := $(TARGET_OUT)
 
 $(INSTALLED_SYSTEMIMAGE): $(BUILT_SYSTEMIMAGE) $(RECOVERY_FROM_BOOT_PATCH) | $(ACP)
-	@echo "Install system fs image: $@"
+	@echo -e ${CL_CYN}"Install system fs image:"${CL_RST}" $@"
 	$(copy-file-to-target)
 	$(hide) $(call assert-max-image-size,$@ $(RECOVERY_FROM_BOOT_PATCH),$(BOARD_SYSTEMIMAGE_PARTITION_SIZE))
 
