@@ -1,4 +1,3 @@
-
 # List of variables we want to print in the build banner.
 print_build_config_vars := \
   PLATFORM_VERSION_CODENAME \
@@ -11,16 +10,10 @@ print_build_config_vars := \
   TARGET_ARCH \
   TARGET_ARCH_VARIANT \
   TARGET_CPU_VARIANT \
-  TARGET_2ND_ARCH \
-  TARGET_2ND_ARCH_VARIANT \
-  TARGET_2ND_CPU_VARIANT \
   HOST_ARCH \
   HOST_2ND_ARCH \
   HOST_OS \
   HOST_OS_EXTRA \
-  HOST_CROSS_OS \
-  HOST_CROSS_ARCH \
-  HOST_CROSS_2ND_ARCH \
   HOST_BUILD_TYPE \
   BUILD_ID \
   OUT_DIR
