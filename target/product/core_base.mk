@@ -25,7 +25,6 @@ endif
 PRODUCT_PACKAGES += \
     ContactsProvider \
     DefaultContainerService \
-    Home \
     TelephonyProvider \
     UserDictionaryProvider \
     atrace \
