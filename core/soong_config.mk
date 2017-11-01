@@ -16,8 +16,8 @@ endif
 # Create soong.variables with copies of makefile settings.  Runs every build,
 # but only updates soong.variables if it changes
 SOONG_VARIABLES_TMP := $(shell mktemp -u)
-include vendor/gzosp/build/soong/soong_config.mk
-$(SOONG_VARIABLES): FORCE gzosp_soong
+include vendor/candy/build/soong/soong_config.mk
+$(SOONG_VARIABLES): FORCE candy_soong
 	$(hide) (\
 	echo '    "Make_suffix": "-$(TARGET_PRODUCT)",'; \
 	echo ''; \
