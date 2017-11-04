@@ -27,7 +27,6 @@ PRODUCT_PACKAGES := \
 	Fallback \
 	Gallery2 \
 	GestureBuilder \
-	Launcher3 \
 	LegacyCamera \
 	librs_jni \
 	libwnndict \
