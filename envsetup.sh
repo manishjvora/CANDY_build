@@ -1636,7 +1636,7 @@ function reposync() {
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/CANDY/build/tools/repopick.py $@
+    $T/vendor/candy/build/tools/repopick.py $@
 }
 
 function fixup_common_out_dir() {
