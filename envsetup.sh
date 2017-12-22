@@ -500,24 +500,31 @@ function add_lunch_combo()
 
 function print_lunch_menu()
 {
+    CL_RED="$(tput setaf 1)"
+    CL_GRN="$(tput setaf 2)"
+    CL_YLW="$(tput setaf 3)"
+    CL_BLU="$(tput setaf 4)"
+    CL_MAG="$(tput setaf 5)"
+    CL_CYN="$(tput setaf 6)"
+    CL_WHT="$(tput setaf 7)"
+    CL_RST="$(tput setaf 9)"
     local uname=$(uname)
     echo
 
     echo ""
-    tput setaf 1;
-    tput bold;
-    echo " ██████╗  █████╗  ███╗   ██╗ ██████╗  ██╗   ██╗"
-    echo "██╔════╝ ██╔══██╗ ████╗  ██║ ██╔══██╗ ╚██╗ ██╔╝"
-    echo "██║      ███████║ ██╔██╗ ██║ ██║  ██║  ╚═██╔═╝ "
-    echo "██║      ██╔══██║ ██║╚██╗██║ ██║  ██║    ██║   "
-    echo "╚██████╗ ██║  ██║ ██║ ╚████║ ██████╔╝    ██║   "
-    echo " ╚═════╝ ╚═╝  ╚═╝ ╚═╝  ╚═══╝ ╚═════╝     ╚═╝   "
-    tput sgr0;
+	echo -e ${CL_YLW}"═══════════════════════════════════════════════════════════════════════════════════"${CLR_RST}
+	echo -e ${CL_BLU}"                     ██████╗"${CL_RED}" █████╗ "${CL_YLW}"███╗   ██╗"${CL_GRN}"██████╗ "${CL_BLU}"██╗   ██╗"${CL_RST}
+	echo -e ${CL_BLU}"                    ██╔════╝"${CL_RED}"██╔══██╗"${CL_YLW}"████╗  ██║"${CL_GRN}"██╔══██╗"${CL_BLU}"╚██╗ ██╔╝"${CL_RST}
+	echo -e ${CL_BLU}"                    ██║     "${CL_RED}"███████║"${CL_YLW}"██╔██╗ ██║"${CL_GRN}"██║  ██║"${CL_BLU}" ╚═██╔═╝ "${CL_RST}
+	echo -e ${CL_BLU}"                    ██║     "${CL_RED}"██╔══██║"${CL_YLW}"██║╚██╗██║"${CL_GRN}"██║  ██║"${CL_BLU}"   ██║   "${CL_RST}
+	echo -e ${CL_BLU}"                    ╚██████╗"${CL_RED}"██║  ██║"${CL_YLW}"██║ ╚████║"${CL_GRN}"██████╔╝"${CL_BLU}"   ██║   "${CL_RST}
+	echo -e ${CL_BLU}"                     ╚═════╝"${CL_RED}"╚═╝  ╚═╝"${CL_YLW}"╚═╝  ╚═══╝"${CL_GRN}"╚═════╝ "${CL_BLU}"   ╚═╝   "${CL_RST}
+	echo -e ${CL_YLW}"═══════════════════════════════════════════════════════════════════════════════════"${CL_RST}
     echo ""
-    echo "                      Welcome to the device menu                      "
+    echo -e ${CL_GRN}"                            Welcome to the device menu                            "${CL_RST}
     echo ""
     tput bold;
-    echo "     Below are all the devices currently available to be compiled     "
+    echo -e ${CL_GRN}"           Below are all the devices currently available to be compiled:     "${CL_RST}
     tput sgr0;
     echo ""
 
