@@ -382,13 +382,12 @@ def AddCompatibilityArchive(target_zip, output_zip, system_included=True,
 
 
 def CopyInstallTools(output_zip):
-  oldcwd = os.getcwd()
-  os.chdir(os.getenv('OUT'))
-  for root, subdirs, files in os.walk("install"):
-    for f in files:
-      p = os.path.join(root, f)
-      output_zip.write(p, p)
-  os.chdir(oldcwd)
+  install_path = os.path.join(OPTIONS.input_tmp, "INSTALL")
+  for root, subdirs, files in os.walk(install_path):
+     for f in files:
+      install_source = os.path.join(root, f)
+      install_target = os.path.join("install", os.path.relpath(root, install_path), f)
+      output_zip.write(install_source, install_target)
 
 
 def WriteFullOTAPackage(input_zip, output_zip):
@@ -949,6 +948,8 @@ endif;
   metadata["ota-required-cache"] = str(script.required_cache)
   WriteMetadata(metadata, output_zip)
 
+  common.ZipWriteStr(output_zip, "system/build.prop",
+                     ""+target_zip.read("SYSTEM/build.prop"))
 
 def WriteVerifyPackage(input_zip, output_zip):
   script = edify_generator.EdifyGenerator(3, OPTIONS.info_dict)
