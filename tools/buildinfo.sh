@@ -31,7 +31,6 @@ echo "ro.product.brand=$PRODUCT_BRAND"
 echo "ro.product.name=$PRODUCT_NAME"
 echo "ro.product.device=$TARGET_DEVICE"
 
-echo "ro.candy.device=$TARGET_DEVICE"
 echo "ro.candy.ota.version=Candy-$TARGET_DEVICE-8.1-OFFICIAL-$(date +"%Y%m%d")"
 
 # These values are deprecated, use "ro.product.cpu.abilist"
