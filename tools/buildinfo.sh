@@ -31,8 +31,6 @@ echo "ro.product.brand=$PRODUCT_BRAND"
 echo "ro.product.name=$PRODUCT_NAME"
 echo "ro.product.device=$TARGET_DEVICE"
 
-echo "ro.candy.ota.version=Candy-$TARGET_DEVICE-8.1-OFFICIAL-$(date +"%Y%m%d")"
-
 # These values are deprecated, use "ro.product.cpu.abilist"
 # instead (see below).
 echo "# ro.product.cpu.abi and ro.product.cpu.abi2 are obsolete,"
@@ -63,5 +61,6 @@ fi
 echo "ro.build.characteristics=$TARGET_AAPT_CHARACTERISTICS"
 
 echo "ro.candy.device=$CANDY_DEVICE"
+echo "ro.candy.ota.version=Candy-$CANDY_DEVICE-8.1-OFFICIAL-$(date +"%Y%m%d")"
 
 echo "# end build properties"
